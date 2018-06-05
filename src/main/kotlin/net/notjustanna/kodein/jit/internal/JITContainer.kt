@@ -1,10 +1,10 @@
-package org.kodein.di.jit.internal
+package net.notjustanna.kodein.jit.internal
 
 import org.kodein.di.DKodein
 import org.kodein.di.TT
 import org.kodein.di.TypeToken
-import org.kodein.di.jit.JIT
-import org.kodein.di.jit.rawType
+import net.notjustanna.kodein.jit.JIT
+import net.notjustanna.kodein.jit.rawType
 import java.lang.reflect.AnnotatedElement
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
@@ -86,10 +86,8 @@ internal class JITContainer {
             }
         }
     }
-
     private fun findConstructor(cls: Class<*>) = _constructors.getOrPut(cls) { createConstructor(cls) }
 
-    /** @suppress */
     internal fun <T : Any> newInstance(kodein: DKodein, cls: Class<T>): T {
         val constructor = findConstructor(cls)
 
