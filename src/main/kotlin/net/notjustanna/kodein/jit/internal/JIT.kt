@@ -1,18 +1,20 @@
+@file:Suppress("UNCHECKED_CAST")
 package net.notjustanna.kodein.jit.internal
 
 import org.kodein.di.DKodein
 import org.kodein.di.TT
 import org.kodein.di.TypeToken
 import net.notjustanna.kodein.jit.JIT
-import net.notjustanna.kodein.jit.Singleton
 import net.notjustanna.kodein.jit.rawType
 import java.lang.reflect.AnnotatedElement
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 import java.lang.reflect.WildcardType
 
-@Suppress("UNCHECKED_CAST")
-internal class JITContainer(private val kodein: DKodein) {
+/**
+ * Class based on jxInject that creates constructors
+ */
+internal object JIT {
 
     private interface Element : AnnotatedElement {
         override fun isAnnotationPresent(c: Class<out Annotation>) = getAnnotation(c) != null
@@ -81,12 +83,5 @@ internal class JITContainer(private val kodein: DKodein) {
         override fun computeValue(type: Class<*>) = createConstructor(type)
     }
 
-    private val singletons = object : ClassValue<Any>() {
-        override fun computeValue(type: Class<*>) = constructors[type]?.let { kodein.it() }
-    }
-
-    internal fun <T : Any> newInstance(cls: Class<T>): T {
-        val instance = if (cls.isAnnotationPresent(Singleton::class.java)) singletons[cls] else (constructors[cls]).invoke(kodein)
-        return instance as T
-    }
+    fun <T> instantiate(kodein: DKodein, cls: Class<T>) = constructors[cls].invoke(kodein) as T
 }
