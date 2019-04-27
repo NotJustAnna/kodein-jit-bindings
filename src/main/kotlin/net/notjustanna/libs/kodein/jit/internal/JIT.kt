@@ -1,11 +1,12 @@
 @file:Suppress("UNCHECKED_CAST")
-package net.notjustanna.kodein.jit.internal
+
+package net.notjustanna.libs.kodein.jit.internal
 
 import org.kodein.di.DKodein
 import org.kodein.di.TT
 import org.kodein.di.TypeToken
-import net.notjustanna.kodein.jit.JIT
-import net.notjustanna.kodein.jit.rawType
+import net.notjustanna.libs.kodein.jit.JIT
+import net.notjustanna.libs.kodein.jit.rawType
 import java.lang.reflect.AnnotatedElement
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type

@@ -1,4 +1,4 @@
-package net.notjustanna.kodein.jit
+package net.notjustanna.libs.kodein.jit
 
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type

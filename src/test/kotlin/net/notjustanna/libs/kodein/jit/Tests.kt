@@ -1,4 +1,4 @@
-package net.notjustanna.kodein.jit
+package net.notjustanna.libs.kodein.jit
 
 import io.kotlintest.matchers.instanceOf
 import io.kotlintest.should

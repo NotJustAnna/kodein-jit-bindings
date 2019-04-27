@@ -1,10 +1,10 @@
-package net.notjustanna.kodein.jit
+package net.notjustanna.libs.kodein.jit
 
 import org.kodein.di.DKodein
 import org.kodein.di.Kodein
 import org.kodein.di.direct
 import org.kodein.di.erased
-import net.notjustanna.kodein.jit.internal.LocalJIT
+import net.notjustanna.libs.kodein.jit.internal.LocalJIT
 
 /**
  * Creates a new just-in-time instance of the given class.

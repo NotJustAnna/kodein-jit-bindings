@@ -1,4 +1,4 @@
-package net.notjustanna.kodein.jit
+package net.notjustanna.libs.kodein.jit
 
 import org.kodein.di.Kodein
 import org.kodein.di.bindings.ExternalSource
@@ -7,7 +7,7 @@ import org.kodein.di.bindings.Singleton
 import org.kodein.di.bindings.externalFactory
 import org.kodein.di.erased
 import org.kodein.di.jvmType
-import net.notjustanna.kodein.jit.internal.LocalJIT
+import net.notjustanna.libs.kodein.jit.internal.LocalJIT
 
 /**
  * Install [KodeinJIT] module and integration.

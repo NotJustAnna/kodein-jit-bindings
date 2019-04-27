@@ -1,4 +1,4 @@
-package net.notjustanna.kodein.jit
+package net.notjustanna.libs.kodein.jit
 
 /**
  * Defines that this should be the constructor used to build.

@@ -1,7 +1,7 @@
-package net.notjustanna.kodein.jit.internal
+package net.notjustanna.libs.kodein.jit.internal
 
 import org.kodein.di.DKodein
-import net.notjustanna.kodein.jit.Singleton
+import net.notjustanna.libs.kodein.jit.Singleton
 import java.util.*
 
 @Suppress("UNCHECKED_CAST")
