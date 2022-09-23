@@ -74,10 +74,4 @@ MyJavaController controller = KodeinJIT.newInstance(kodein, MyJavaController.cla
 - You can make KodeinJIT recursively instantiate just-in-time all the required dependencies.
 - **`NEW`** Multiple constructors? Annotate the right one with the **@JIT** annotation to make sure it's the right one!
 - **`NEW`** Annotate your class with the **@Singleton** annotation to make the JIT instance a singleton!
-  - **Note**: A singleton-annotated class trying to instantiate another singleton-annotated class will throw a circular dependency exception, because... uh... Kodein.
-
-### Support
-
-
-
-
+  - **Note**: A singleton-annotated class trying to instantiate another singleton-annotated class will throw a circular dependency exception.
